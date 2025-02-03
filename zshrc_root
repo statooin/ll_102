@@ -290,8 +290,8 @@ bindkey "^W" zle_backward_kill_word_accumulate
 
 # Bind Ctrl+Y to yank (paste) the accumulated buffer
 zle_yank() {
-        NEW_CMD=1
-        zle yank
+	NEW_CMD=1
+	zle yank
 }
 zle -N zle_yank
 
@@ -300,8 +300,8 @@ bindkey "^Y" zle_yank
 #-----------------------------------
 
 #zle_accept_line() {
-#       NEW_CMD=1
-#       zle accept-line
+#	NEW_CMD=1
+#	zle accept-line
 #}
 #zle -N zle_accept_line
 
@@ -335,16 +335,16 @@ bindkey "^[^H" zle_backward_kill_till_nonalphanum_accumulate
 #-----------------------------------
 
 #zle_bash_forward_word() {
-#       local WORDCHARS=''
-#       zle forward-word
+#	local WORDCHARS=''
+#	zle forward-word
 #}
 #zle -N zle_bash_forward_word
 #bindkey "^[[1;5C" zle_bash_forward_word
 
 
 #zle_bash_backward_word() {
-#       local WORDCHARS=''
-#       zle backward-word
+#	local WORDCHARS=''
+#	zle backward-word
 #}
 #zle -N zle_bash_backward_word
 #bindkey "^[[1;5D" zle_bash_backward_word
@@ -366,9 +366,11 @@ bindkey '^[[1;5D' emacs-backward-word
 
 # Bind all printable keys to the custom function
 #for key in {a..z} {A..Z} {0..9} ' ' '!' '"' '#' '$' '%' '&' '\'' '(' ')' '*' '+' ',' '-' '.' '/' ':' ';' '<' '=' '>' '?' '@' '[' '\\' ']' '^' '_' '`' '{' '|' '}' '~'; do
-#       echo "$key"
-#       bindkey -s "$key" "set_vars_and_pass_key $key" 
+#	echo "$key"
+#	bindkey -s "$key" "set_vars_and_pass_key $key" 
 #done
 
 
 alias ll='ls -lah --color=always --group-directories-first'
+alias his='history'
+alias ipb='ip --brief --color=always'
